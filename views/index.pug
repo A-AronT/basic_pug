@@ -1,0 +1,19 @@
+html
+    head
+        title= title
+    body
+        h1= message
+        input(
+            id='emailcompare'
+            type="email"
+        )
+        script.
+            function tempFunc (email) {
+                if(email.match(".*@+.*")){
+                    console.log('Email')
+                }else {
+                    console.log('Not an email')
+                }
+            }
+
+        button(onclick="tempFunc(document.getElementById('emailcompare').value)") Check email
